@@ -586,7 +586,7 @@ class BertEncoder(nn.Module):
         image_attention_mask: Tensor,
         co_attention_mask: Tensor,
         output_all_encoded_layers: bool = True,
-        output_all_attention_masks: bool = False,
+        output_all_attention_masks: bool = True,
     ) -> Tuple[
         List[Tensor],
         List[Tensor],
