@@ -37,7 +37,7 @@ class VisualBERTBase(BertPreTrainedModel):
         visual_embedding_dim=512,
         embedding_strategy="plain",
         bypass_transformer=False,
-        output_attentions=False,
+        output_attentions=True,
         output_hidden_states=False,
     ):
         super().__init__(config)

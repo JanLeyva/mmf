@@ -8,7 +8,7 @@ model_config:
     cut_first: text
     embedding_strategy: plain
     bypass_transformer: false
-    output_attentions: false
+    output_attentions: true
     output_hidden_states: false
     text_only: false
     random_initialize: false

@@ -55,7 +55,7 @@ model_config:
     cut_first: text
     embedding_strategy: plain
     bypass_transformer: false
-    output_attentions: false # need to implement
+    output_attentions: true # need to implement
     output_hidden_states: false # need to implement
     text_only: false
     freeze_base: false
