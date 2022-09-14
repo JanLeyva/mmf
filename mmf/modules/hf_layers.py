@@ -320,11 +320,16 @@ class BertEncoderJit(BertEncoder):
         attention_mask: Optional[Tensor],
         encoder_hidden_states: Optional[Tensor] = None,
         encoder_attention_mask: Optional[Tensor] = None,
-        output_attentions: bool = False,
-        output_hidden_states: bool = False,
+        output_attentions: bool = None,                   # changed for weight_viz
+        output_hidden_states: bool = None,                # changed for weight_viz
         return_dict: bool = False,
         head_mask: Optional[Tensor] = None,
     ) -> Tuple[Tensor]:
+        if output_attentions is None:                     # changed for weight_viz
+            output_attentions = self.output_attentions    # changed for weight_viz        
+        if output_hidden_states is None:
+            output_hidden_states = self.output_hidden_states
+
         all_hidden_states = ()
         all_attentions = ()
         for i, layer_module in enumerate(self.layer):
